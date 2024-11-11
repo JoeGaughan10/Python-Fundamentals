@@ -94,22 +94,78 @@
 
 #------------------------ Task 2 -----------------------------------
 
-favourite_websites = [
-    "https://www.bbc.co.uk/",
-    "https://chatgpt.com/",
-    "https://www.youtube.com/"
-]
+# favourite_websites = [
+#     "https://www.bbc.co.uk/",
+#     "https://chatgpt.com/",
+#     "https://www.youtube.com/"
+# ]
 
-favourite_websites.remove("https://www.bbc.co.uk/") # .remove removes values by content, not index.
-print(favourite_websites)
+# favourite_websites.remove("https://www.bbc.co.uk/") # .remove removes values by content, not index.
+# print(favourite_websites)
 
-favourite_websites.reverse() # .reverse reverses the order of the items within a list.
-print(favourite_websites)
+# favourite_websites.reverse() # .reverse reverses the order of the items within a list.
+# print(favourite_websites)
 
-favourite_websites.sort() # .sort sorts the items and can be tailored to specific criteria.
-print(favourite_websites)
+# favourite_websites.sort() # .sort sorts the items and can be tailored to specific criteria.
+# print(favourite_websites)
 
-print(favourite_websites.count("https://chatgpt.com/")) # .count() counts the number of times an item occurs.
+# print(favourite_websites.count("https://chatgpt.com/")) # .count() counts the number of times an item occurs.
 
-favourite_websites.extend(["https://www.netflix.com/gb/", "https://open.spotify.com/"]) # .extend extends the list by one or more items.
-print(favourite_websites)
+# favourite_websites.extend(["https://www.netflix.com/gb/", "https://open.spotify.com/"]) # .extend extends the list by one or more items.
+# print(favourite_websites)
+
+#------------------------------------------------------------------------
+
+# favourite_cars = [
+#     "lotus",
+#     "porsche",
+#     "ferrari"
+# ]
+
+# car_guess1 = input("Can you guess one of my 3 favourite car makes? ").lower()
+
+# if car_guess1 in favourite_cars:
+#     print("That is one of them! ")
+#     car_guess2 = input("Can you guess another? ").lower()
+#     if car_guess2 in favourite_cars and car_guess2 != car_guess1:
+#         print("Absolutely!")
+#         car_guess3 = input("Can you guess the final one? ").lower()
+#         if car_guess3 in favourite_cars and car_guess3 != car_guess1 and car_guess3 != car_guess2:
+#             print("You got them all! Well Done.")
+#         elif car_guess3 == car_guess1 or car_guess3 == car_guess2:
+#             print(f"You have already got {car_guess3}!")
+#         else:
+#             print("No, that is not one of my favourites.")
+#     elif car_guess2 == car_guess1:
+#         print(f"You have already guessed {car_guess2}!")
+#     else:
+#         print("No, that is not one of my favourites.")
+# else:
+#     print("No, that is not one of my favourites.")
+
+# print("Good try!")
+
+#---------------------------- Chat GPT Version ---------------------------------------
+
+favourite_cars = {"lotus", "porsche", "ferrari"}  # Using a set for faster lookup
+guessed_cars = set()  # Set to keep track of correct guesses
+
+print("Try to guess my 3 favourite car makes!")
+
+# Loop to allow up to 3 unique guesses
+for attempt in range(3):
+    car_guess = input("Can you guess one of my favourite car makes? ").lower()
+
+    if car_guess in guessed_cars:
+        print(f"You've already guessed correct guess to the set
+
+        if len(guessed_cars) == len(favourite_cars):
+            print("You got them all! Well done.")
+            break  # Exit loop if all guesses are correct
+    else:
+        print("No, that is not one of my favourites.")
+
+# End of game message
+if len(guessed_cars) < len(favourite_cars):
+    print("Good try! Here were my favourite cars:")
+    print(", ".join(favourite_cars))

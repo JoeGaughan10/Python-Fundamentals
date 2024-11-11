@@ -51,74 +51,74 @@
 
 #-------------------------- Task 2 ------------------------------------------
 
-# baby_animals = {
-#     "Gecko" : "Hatchling",
-#     "Whale" : "Calf",
-#     "Swan" : "Signet"
-# }
-
-# searched_animal = input("Please search for an animal to discover the name of it's young. ").capitalize()
-
-# if searched_animal in baby_animals:
-#     print(f"A {searched_animal.lower()}'s young is a {baby_animals[searched_animal].lower()}.")
-# else:
-#     print("Sorry, that animal is unknown.")
-
-# inquire = True
-
-# while inquire == True:
-#     search_again = input("Would you like to search for another animal? (y/n) ")
-#     if search_again.lower() == "y":
-#         searched_animal = input("Please search for an animal to discover the name of it's young. ").capitalize()
-#         if searched_animal in baby_animals:
-#             print(f"A {searched_animal.lower()}'s young is a {baby_animals[searched_animal].lower()}.")
-#         else:
-#             print("Sorry, that animal is unknown.")
-#     elif search_again.lower() == "n":
-#         print("I hope that was helpful!")
-#         inquire = False
-#     else:
-#         print ("Invalid response. Please try again using 'y' or 'n'.")
-
-# --------------------------- This starts with asking for another search ------------------------------
-
-# ---------------------------- Chat GPT Version ---------------------------------
-
 baby_animals = {
-    "Gecko": "Hatchling",
-    "Whale": "Calf",
-    "Swan": "Signet"
+    "Gecko" : "Hatchling",
+    "Whale" : "Calf",
+    "Swan" : "Signet"
 }
 
-# Initial search
-searched_animal = input("Please search for an animal to discover the name of its young: ").capitalize()
+searched_animal = input("Please search for an animal to discover the name of it's young. ").capitalize()
 
-# Check if the animal exists in the dictionary
 if searched_animal in baby_animals:
     print(f"A {searched_animal.lower()}'s young is a {baby_animals[searched_animal].lower()}.")
 else:
     print("Sorry, that animal is unknown.")
 
-# Inquiry loop
 inquire = True
 
-while inquire:
-    search_again = input("Would you like to search for another animal? (y/n) ").lower()
-    
-    if search_again == "y":
-        searched_animal = input("Please search for an animal to discover the name of its young: ").capitalize()
-        
-        # Check if the animal exists in the dictionary
+while inquire == True:
+    search_again = input("Would you like to search for another animal? (y/n) ")
+    if search_again.lower() == "y":
+        searched_animal = input("Please search for an animal to discover the name of it's young. ").capitalize()
         if searched_animal in baby_animals:
             print(f"A {searched_animal.lower()}'s young is a {baby_animals[searched_animal].lower()}.")
         else:
             print("Sorry, that animal is unknown.")
-    
-    elif search_again == "n":
+    elif search_again.lower() == "n":
         print("I hope that was helpful!")
         inquire = False
-    
     else:
-        print("Invalid response. Please try again using 'y' or 'n'.")
+        print ("Invalid response. Please try again using 'y' or 'n'.")
+
+# --------------------------- This starts with asking for another search ------------------------------
+
+# ---------------------------- Chat GPT Version ---------------------------------
+
+# baby_animals = {
+#     "Gecko": "Hatchling",
+#     "Whale": "Calf",
+#     "Swan": "Signet"
+# }
+
+# # Initial search
+# searched_animal = input("Please search for an animal to discover the name of its young: ").capitalize()
+
+# # Check if the animal exists in the dictionary
+# if searched_animal in baby_animals:
+#     print(f"A {searched_animal.lower()}'s young is a {baby_animals[searched_animal].lower()}.")
+# else:
+#     print("Sorry, that animal is unknown.")
+
+# # Inquiry loop
+# inquire = True
+
+# while inquire:
+#     search_again = input("Would you like to search for another animal? (y/n) ").lower()
+    
+#     if search_again == "y":
+#         searched_animal = input("Please search for an animal to discover the name of its young: ").capitalize()
+        
+#         # Check if the animal exists in the dictionary
+#         if searched_animal in baby_animals:
+#             print(f"A {searched_animal.lower()}'s young is a {baby_animals[searched_animal].lower()}.")
+#         else:
+#             print("Sorry, that animal is unknown.")
+    
+#     elif search_again == "n":
+#         print("I hope that was helpful!")
+#         inquire = False
+    
+#     else:
+#         print("Invalid response. Please try again using 'y' or 'n'.")
 
 #-------------------------- Still not working. --------------------------------------
