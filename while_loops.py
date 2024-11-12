@@ -35,15 +35,35 @@
 
 # Task 3
 
+# username = "un"
+# password = "pw"
+
+# username_check = input("Enter your username: ")
+# password_check = input("Enter your password: ")
+
+# while username != username_check and password != password_check:
+#     print("Incorrect. Please try again")
+#     username_check = input("Enter your username: ")
+#     password_check = input("Enter your password: ")
+
+# print("Correct. You may enter.")
+
+# Task 4
+
 username = "un"
 password = "pw"
 
 username_check = input("Enter your username: ")
 password_check = input("Enter your password: ")
 
-while username != username_check and password != password_check:
-    print("Incorrect. Please try again")
+count = 1
+while username != username_check and password != password_check and count < 3:
+    print(f"Incorrect. {3-count} attempts remaining. Please try again")
     username_check = input("Enter your username: ")
     password_check = input("Enter your password: ")
+    count = count + 1
 
-print("Correct. You may enter.")
+if username == username_check and password == password_check:
+    print("Correct. You may enter.")
+else:
+    print("Incorrect. No further attempts permitted.")
