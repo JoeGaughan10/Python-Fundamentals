@@ -2,7 +2,7 @@
 import random
 from colorama import Fore, Style, Back #* we have imported 'colorama' and 'random' library and used their functions
 
-def function():    #* we are defining a function that will ask a question, that generates a random number and chooses an item from the relevant list according to set condition.
+def game_function():    #* we are defining a function that will ask a question, that generates a random number and chooses an item from the relevant list according to set condition.
  input("What is your question?: ")   #user input 
 
  rdm_num = (random.randint(1,2))   # generation of random number between integers (1,2)- 50% chances of odd/even
@@ -41,7 +41,7 @@ def function():    #* we are defining a function that will ask a question, that 
    print("Invalid entry. Please type Y/N")
    repeat= input("Do you want to ask another question? (Y/N): ").strip().lower()
  if repeat == "y":  # revisit the initial function and repeat the whole process
-  function ()
+  game_function ()
  elif repeat == "n":  # exit the program. Will use ascii
   print(r"""       Thank You 
          .-'-.
@@ -54,4 +54,4 @@ def function():    #* we are defining a function that will ask a question, that 
 # to avoid this, we used the "raw strings" prefix "r", "r" will help maintain proper formatting, while using triple quotes (""") handles multi-line strings.
 
  
-function() # calling function() to start the program
+game_function() # calling function() to start the program
